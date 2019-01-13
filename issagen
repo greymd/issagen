@@ -2,11 +2,12 @@
 set -u
 readonly ISGN_THIS_FILE_NAME="${0##*/}"
 readonly ISGN_THIS_DIR="$PWD"
-readonly ISGN_FONT=${ISGN_FONT:-Helvetica}
-readonly ISGN_IMG_SOURCE=${ISGN_IMG_SOURCE:-https://img.gifmagazine.net/gifmagazine/images/2122213/original.gif}
 readonly ISGN_TMPDIR="${TMPDIR:-/tmp}"
+ISGN_MSG=
 ISGN_SILENT=0
 ISGN_UNAME=$(uname | grep -oiE '(Darwin|Linux)')
+ISGN_FONT=${ISGN_FONT:-Helvetica}
+ISGN_IMG_SOURCE=${ISGN_IMG_SOURCE:-https://img.gifmagazine.net/gifmagazine/images/2122213/original.gif}
 
 trap 'rm -f "${ISGN_TMPDIR}"/isgn_* "${ISGN_TMPDIR}"/issagen.gif' EXIT
 
@@ -77,10 +78,6 @@ _EOS_
 }
 
 isgn_parse_options() {
-  if (( $# == 1 )) ;then
-    isgn_usage
-    isgn_error_exit 1 "No arguments are given."
-  fi
   while (( $# > 0 ))
   do
     case "$1" in
@@ -103,6 +100,7 @@ isgn_parse_options() {
         ;;
     esac
   done
+  [[ -z "$ISGN_MSG" ]] && isgn_error_exit 1 "No message is specified"
 }
 
 main () {
