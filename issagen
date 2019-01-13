@@ -2,7 +2,7 @@
 set -u
 readonly ISGN_THIS_FILE_NAME="${0##*/}"
 readonly ISGN_THIS_DIR="$PWD"
-readonly ISGN_FONT=${ISGN_FONT:-Arial}
+readonly ISGN_FONT=${ISGN_FONT:-Helvetica}
 readonly ISGN_IMG_SOURCE=${ISGN_IMG_SOURCE:-https://img.gifmagazine.net/gifmagazine/images/2122213/original.gif}
 readonly ISGN_TMPDIR="${TMPDIR:-/tmp}"
 ISGN_SILENT=0
