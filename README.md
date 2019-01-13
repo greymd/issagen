@@ -1,7 +1,7 @@
 # issagen
 Issa Generator
 
-```
+```bash
 $ issagen "LGTM"
 ```
 
@@ -13,7 +13,7 @@ $ issagen "LGTM"
 
 ### macOS
 
-```
+```bash
 $ brew tap greymd/tools
 $ brew update
 $ brew install issagen
@@ -21,18 +21,16 @@ $ brew install issagen
 
 ### RHEL compatible distros:
 
-```
+```bash
 $ sudo yum install https://github.com/greymd/issagen/releases/download/v1.0.0/issagen-v1.0.0.rpm
 ```
 
 ### Debian base distros:
 
-```
+```bash
+$ sudo apt install imagemagick
 $ wget https://github.com/greymd/issagen/releases/download/v1.0.0/issagen-v1.0.0.deb
 $ sudo dpkg -i issagen-v1.0.0.deb
-
-!! If you found errors, run this command
-$ sudo apt -f install
 ```
 
 
@@ -57,4 +55,3 @@ OPTIONS:
 ```
 $ issagen -f /Library/Fonts/AppleGothic.ttf 表へ出ろ
 ```
-
