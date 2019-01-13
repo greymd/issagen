@@ -43,10 +43,10 @@ if [[ $ISGN_UNAME == 'Darwin' ]]; then
 elif [[ $ISGN_UNAME == 'Linux' ]]; then
   ## For Linux
   isgn_open () {
-    type firefox &>/dev/null && { firefox "$1"; return; }
-    type eog &>/dev/null && { eog -f "$1"; return; }
     type xdg-open &>/dev/null && { xdg-open "$1"; return; }
+    type eog &>/dev/null && { eog -f "$1"; return; }
     type gnome-open &>/dev/null && { gnome-open "$1"; return; }
+    type firefox &>/dev/null && { firefox "$1"; return; }
     isgn_error_exit 1 "Image viewer is not found"
   }
 fi
@@ -109,7 +109,7 @@ isgn_parse_options() {
 main () {
   isgn_envcheck "convert yes"
   isgn_parse_options "$@"
-  cd "${TMPDIR:-/tmp}" || isgn_error_exit 1 "Failed to move to temporary directory"
+  cd "${ISGN_TMPDIR}" || isgn_error_exit 1 "Failed to move to temporary directory"
   isgn_info "Download original gif image ..."
   isgn_img_get "${ISGN_IMG_SOURCE}" "isgn_original.gif"
   isgn_info "Converting gif image ..."
