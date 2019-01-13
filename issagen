@@ -29,7 +29,7 @@ isgn_img_get () {
   if type curl &> /dev/null ;then
     curl -s "$_url" > "$_file"
   elif type wget &> /dev/null ;then
-    wget "$_url" -O "$_file"
+    wget -q "$_url" -O "$_file"
   else
     isgn_error_exit 1 "curl or wget is required"
   fi
