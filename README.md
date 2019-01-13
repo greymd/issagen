@@ -2,16 +2,39 @@
 Issa Generator
 
 ```
-$ issagen USA
+$ issagen "LGTM"
 ```
 
+**=> issagen.gif file is generated.**
+
+![issagen.gif](./img/issagen.gif)
+
 ## Installation
+
+### macOS
 
 ```
 $ brew tap greymd/tools
 $ brew update
 $ brew install issagen
 ```
+
+### RHEL compatible distros:
+
+```
+$ sudo yum install https://github.com/greymd/issagen/releases/download/v1.0.0/issagen-v1.0.0.rpm
+```
+
+### Debian base distros:
+
+```
+$ wget https://github.com/greymd/issagen/releases/download/v1.0.0/issagen-v1.0.0.deb
+$ sudo dpkg -i issagen-v1.0.0.deb
+
+!! If you found errors, run this command
+$ sudo apt -f install
+```
+
 
 ## Usage
 
