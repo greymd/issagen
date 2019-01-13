@@ -1,5 +1,6 @@
 #!/bin/bash
 set -u
+readonly ISGN_VERSION="v0.0.0"
 readonly ISGN_THIS_FILE_NAME="${0##*/}"
 readonly ISGN_THIS_DIR="$PWD"
 readonly ISGN_TMPDIR="${TMPDIR:-/tmp}"
@@ -83,6 +84,10 @@ isgn_parse_options() {
     case "$1" in
       --help|-h)
         isgn_usage
+        exit 0
+        ;;
+      --version|-V)
+        echo "${ISGN_VERSION}"
         exit 0
         ;;
       -f)
