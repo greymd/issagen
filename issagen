@@ -78,7 +78,7 @@ _EOS_
 }
 
 isgn_parse_options() {
-  if (( $# == 0 )) ;then
+  if (( $# == 1 )) ;then
     isgn_usage
     isgn_error_exit 1 "No arguments are given."
   fi
