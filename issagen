@@ -61,7 +61,6 @@ isgn_envcheck () {
 }
 
 isgn_usage() {
-  readonly ISGN_THIS_FILE_NAME="${0##*/}"
   cat << _EOS_
 Usage:
   ${ISGN_THIS_FILE_NAME} [OPTIONS] [message]
