@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -u
 readonly ISGN_VERSION="v1.0.0"
 readonly ISGN_THIS_FILE_NAME="${0##*/}"
@@ -134,4 +134,4 @@ main () {
   fi
 }
 
-main "${1+"$@"}"
+main ${1+"$@"}
