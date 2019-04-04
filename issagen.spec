@@ -7,7 +7,7 @@ Release:    %(date '+%'s)
 URL:        https://github.com/greymd/issagen
 Source:     https://github.com/greymd/issagen/archive/v%{version}.tar.gz
 BuildArch:  noarch
-Vendor:     Yamada, Yasuhiro <greengregson at gmail dot com>
+Vendor:     Yasuhiro Yamada
 Requires:   ImageMagick
 Provides:   issagen
 
