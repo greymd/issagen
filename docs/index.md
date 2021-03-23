@@ -1,37 +1,59 @@
-## Welcome to GitHub Pages
+# issagen
 
-You can use the [editor on GitHub](https://github.com/greymd/issagen/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Issa Generator
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+$ issagen "LGTM"
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+**=> issagen.gif file is generated.**
 
-### Jekyll Themes
+![issagen.gif](./img/issagen.gif)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/greymd/issagen/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Installation
 
-### Support or Contact
+### macOS
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```bash
+$ brew tap greymd/tools
+$ brew update
+$ brew install issagen
+```
+
+### RHEL compatible distros:
+
+```bash
+$ sudo yum install -y ImageMagick
+$ sudo yum install -y https://git.io/issagen.rpm
+```
+
+### Debian base distros:
+
+```bash
+$ sudo apt install imagemagick wget
+$ wget https://git.io/issagen.deb
+$ sudo dpkg -i issagen.deb
+```
+
+
+## Usage
+
+```
+Usage:
+  issagen [OPTIONS] [message]
+
+Description:
+  Issa Generator.
+  Generate issagen.gif on the current directory.
+
+OPTIONS:
+  -h,--help   Show this screen.
+  -f          Specify font name (i.e, Arial, Times) or path of ttc/ttf file.
+  -s          Silent mode (Do not open image viewer).
+```
+
+## Example
+
+```
+$ issagen -f /Library/Fonts/AppleGothic.ttf 表へ出ろ
+```
