@@ -7,7 +7,7 @@ $ issagen "LGTM"
 
 **=> issagen.gif file is generated.**
 
-![issagen.gif](./img/issagen.gif)
+![issagen.gif](./docs/img/issagen.gif)
 
 ## Installation
 
